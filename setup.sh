@@ -12,17 +12,16 @@ ln -s ~/.config/dotfiles/.tmux.conf ~/.tmux.conf
 sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Install p10k theme
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+# install starship
+curl -sS https://starship.rs/install.sh | sh
 
 # Install zsh plugins
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/custom/plugins/zsh-autosuggestions
 
 git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
 cd zsh-syntax-highlighting/themes/
-mkdir ~/.zsh
-cp -v catppuccin_mocha-zsh-syntax-highlighting.zsh ~/.zsh/
+cp -v catppuccin_mocha-zsh-syntax-highlighting.zsh ~/.zsh/custom/plugin
 cd ../..
 rm -rf zsh-syntax-highlighting
 
