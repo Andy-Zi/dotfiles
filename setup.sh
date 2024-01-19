@@ -16,13 +16,13 @@ chsh -s $(which zsh)
 curl -sS https://starship.rs/install.sh | sh
 
 # Install zsh plugins
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
-cd zsh-syntax-highlighting/themes/
-cp -v catppuccin_mocha-zsh-syntax-highlighting.zsh ~/.zsh/custom/plugin
-cd ../..
+cd zsh-syntax-highlighting/
+cp -vr /themes ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
+cd ..
 rm -rf zsh-syntax-highlighting
 
 # Install tmux
