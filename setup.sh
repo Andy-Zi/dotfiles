@@ -19,6 +19,12 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
+cd zsh-syntax-highlighting/themes/
+mkdir ~/.zsh
+cp -v catppuccin_mocha-zsh-syntax-highlighting.zsh ~/.zsh/
+cd ../..
+rm -rf zsh-syntax-highlighting
 
 # Install tmux
 sudo apt-get install tmux
