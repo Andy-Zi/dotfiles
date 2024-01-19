@@ -10,6 +10,8 @@ ln -s ~/.config/dotfiles/.tmux.conf ~/.tmux.conf
 sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+chsh -s $(which zsh)
+
 # install starship
 curl -sS https://starship.rs/install.sh | sh
 
