@@ -122,3 +122,5 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(starship init zsh)"
