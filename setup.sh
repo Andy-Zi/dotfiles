@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # Create symlinks
-ln -s ~/.config/dotfiles/nvim ~/.config/nvim
 ln -s ~/.config/dotfiles/.p10k.zsh ~/.p10k.zsh
 ln -s ~/.config/dotfiles/.oh-my-zsh ~/.oh-my-zsh
 ln -s ~/.config/dotfiles/.zshrc ~/.zshrc
 ln -s ~/.config/dotfiles/.tmux.conf ~/.tmux.conf
+
+# Install nvim
+git clone git@github.com:Andy-Zi/nvim.git ~/.config
+
 
 # Install oh my zsh
 sudo apt-get install zsh
