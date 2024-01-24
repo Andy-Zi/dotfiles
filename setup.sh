@@ -21,6 +21,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
 cd zsh-syntax-highlighting/
+mkdir ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
 cp -vr /themes ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes
 cd ..
 rm -rf zsh-syntax-highlighting
