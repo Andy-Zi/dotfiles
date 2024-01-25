@@ -33,5 +33,3 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 sudo apt install bat
 sudo apt install zoxide
-mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat
