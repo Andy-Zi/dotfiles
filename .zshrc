@@ -75,6 +75,7 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  autoswitch_virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -107,6 +108,7 @@ fi
 
 alias vim=nvim
 alias bat=batcat
+alias python=python3.11
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
