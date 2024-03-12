@@ -112,6 +112,7 @@ export PATH=$PATH:$HOME/.local/bin
 alias vim=nvim
 alias bat=batcat
 alias python=python3.11
+alias python=python3
 
 eval "$(zoxide init --cmd cd zsh)"
 
