@@ -76,6 +76,8 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   autoswitch_virtualenv
+  docker
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,7 +113,6 @@ export PATH=$PATH:$HOME/.local/bin
 
 alias vim=nvim
 alias bat=batcat
-alias python=python3.11
 alias python=python3
 
 eval "$(zoxide init --cmd cd zsh)"
@@ -119,6 +120,10 @@ eval "$(zoxide init --cmd cd zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$HOME/local/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
+export MANPATH=$HOME/local/share/man:$MANPATH
 
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 eval "$(zoxide init zsh)"
@@ -133,4 +138,7 @@ if [ -f '/home/andreas/google-cloud-sdk/path.zsh.inc' ]; then . '/home/andreas/g
 if [ -f '/home/andreas/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/andreas/google-cloud-sdk/completion.zsh.inc'; fi
 
 autoload -U +X bashcompinit && bashcompinit
+### Fix for making Docker plugin work
+autoload -U compinit && compinit
+###
 complete -o nospace -C /usr/bin/terraform terraform
