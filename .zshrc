@@ -110,6 +110,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
 
 alias vim=nvim
 alias bat=batcat
